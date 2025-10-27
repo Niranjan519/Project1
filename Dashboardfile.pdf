@@ -1,0 +1,109 @@
+Retail Performance & Profitability Analysis Dashboard Layout
+
+Objective: A single-page, interactive dashboard to monitor profitability, identify profit-draining categories, and assess inventory efficiency using Shipping Lead Time as a proxy for inventory turnover speed.
+
+Target Audience: Retail Category Managers, Supply Chain Analysts, Executives
+
+I. Dashboard Structure (Power BI/Tableau)
+
+Section
+
+Filters/Slicers (Top/Left Panel)
+
+Core Visualizations (Main Canvas)
+
+Purpose
+
+Header
+
+Date Range Selector
+
+KPI Cards (Total Sales, Total Profit, Overall Profit Margin %, Avg. Shipping Lead Time)
+
+Instant high-level performance snapshot.
+
+Profitability
+
+Region Filter, Season/Month Filter
+
+1. Bar Chart: Profit Margin % by Top 10 Category/Sub-Category
+
+Quickly identify the most and least profitable segments.
+
+Category Deep Dive
+
+Product Type Filter
+
+2. Treemap/Sunburst: Sales vs. Profit % (Size=Sales, Color=Profit Margin)
+
+Visual segmentation of high-volume, low-margin "profit drains."
+
+Inventory & Risk
+
+Category Filter
+
+3. Scatter Plot: Avg. Shipping Lead Time (Days) (X-axis) vs. Profit Margin % (Y-axis)
+
+Key analysis for fulfillment/stocking efficiency. Look for points in the upper-right (high lead time, high margin) and lower-right (high lead time, low margin - immediate risk).
+
+Trend & Detail
+
+N/A
+
+4. Line Chart: Monthly Sales and Profit Trend (Dual Axis)
+
+Analyze seasonality and overall business trajectory.
+
+Risk Table
+
+N/A
+
+5. Detail Table: List of Bottom 20 Products by Profit Margin AND Shipping Lead Time > Threshold.
+
+Actionable list of items requiring immediate attention (slow-moving fulfillment risks).
+
+II. Key Insights & Strategic Suggestions (Report Draft)
+
+Project Goal: Deriving strategic suggestions for slow-moving and overstocked items based on the analysis of correlation between Shipping Lead Time (Inventory Proxy) and Profitability.
+
+1. Inventory-Profitability Correlation Finding
+
+Python Analysis Result: (To be filled in by the Python script: e.g., A weak negative correlation of -0.15 was found between Avg. Shipping Lead Time and Avg. Profit Margin (%).)
+
+Interpretation: A negative correlation suggests that as products take longer to ship (higher Lead Time, implying lower inventory efficiency), the profit they generate tends to decrease, possibly due to higher fulfillment costs or customer dissatisfaction.
+
+2. Profit-Draining Categories (Example)
+
+Category/Sub-Category
+
+Profit Margin %
+
+Shipping Lead Time (Days)
+
+Strategic Suggestion
+
+Technology/Phones
+
+4.2% (Low)
+
+7.5
+
+Supply Chain Focus: Low margin combined with high lead time suggests immediate supply chain intervention. Renegotiate vendor terms or find faster logistics partners.
+
+Furniture/Tables
+
+-12.1% (Loss)
+
+5.2
+
+Pricing Review: Items operating at a loss require urgent pricing or cost-reduction review, regardless of lead time.
+
+3. Strategic Recommendations for Slow-Moving/Overstocked Items
+
+Triage High-Risk Stock: Immediately address products found in the High-Risk list (low margin, high shipping lead time). These items suffer from both low profitability and poor fulfillment efficiency. Focus on stocking them closer to high-demand regions.
+
+Optimize Fulfillment: For categories with high shipping lead times but reasonable margins, investigate stocking levels and warehouse processes. The delay is not hitting profitability yet, but risks customer attrition.
+
+Review Pricing Strategy: Products with adequate sales volume but very low margins may be priced too low relative to COGS. Review competitive pricing to ensure margins meet the minimum threshold.
+
+Seasonal Pre-Stock: Use the seasonality analysis (Line Chart and Quarter Filter) to proactively stock high-demand items just before their peak season begins, reducing lead times during critical sales periods.
